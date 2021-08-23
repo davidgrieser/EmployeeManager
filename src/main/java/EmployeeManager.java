@@ -10,7 +10,11 @@ public class EmployeeManager {
     }
 
     EmployeeManager(String[] initialEmployees) {
-       this.employees = Arrays.asList(initialEmployees);
+        this.employees = Arrays.asList(initialEmployees);
+    }
+
+    EmployeeManager(List<String> initialEmployees) {
+        this.employees = initialEmployees;
     }
 
     public void addEmployee(String name) {
