@@ -10,4 +10,12 @@ public class EmployeeManagerTest {
         employeeManager.addEmployee("Jimmy");
         assertEquals("Jimmy", employeeManager.getEmployees());
     }
+
+    @Test
+    void canAddMultipleEmployees() {
+        EmployeeManager employeeManager = new EmployeeManager();
+        employeeManager.addEmployee("Jimmy");
+        employeeManager.addEmployee("Timmy");
+        assertEquals("Jimmy, Timmy", employeeManager.getEmployees());
+    }
 }
