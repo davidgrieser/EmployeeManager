@@ -18,4 +18,15 @@ public class EmployeeManagerTest {
         employeeManager.addEmployee("Timmy");
         assertEquals("Jimmy, Timmy", employeeManager.getEmployees());
     }
+
+    @Test
+    void initializeEmployeeManager() {
+        String[] initialEmployees = new String[]{"Jimmy", "Timmy"};
+//        String[] initialEmployees = new String[3];
+//        initialEmployees[0] = "Jimmy";
+//        initialEmployees[1] = "Timmy";
+//        initialEmployees[2] = "Fimmy";
+        EmployeeManager employeeManager = new EmployeeManager(initialEmployees);
+        assertEquals("Jimmy, Timmy", employeeManager.getEmployees());
+    }
 }
