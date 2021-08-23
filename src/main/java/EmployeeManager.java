@@ -3,23 +3,23 @@ import java.util.Arrays;
 import java.util.List;
 
 public class EmployeeManager {
-    private List<String> employees;
+    private List<Employee> employees;
 
     EmployeeManager() {
         employees = new ArrayList<>();
     }
 
-    EmployeeManager(String[] initialEmployees) {
-        this.employees = Arrays.asList(initialEmployees);
-    }
+//    EmployeeManager(String[] initialEmployees) {
+//        this.employees = Arrays.asList(initialEmployees);
+//    }
 
-    EmployeeManager(List<String> initialEmployees) {
+    EmployeeManager(List<Employee> initialEmployees) {
         this.employees = initialEmployees;
     }
 
-    public void addEmployee(String name) {
+    public void addEmployee(Employee employee) {
         // Add this employee to an ArrayList
-        employees.add(name);
+        employees.add(employee);
     }
 
     public String getEmployees() {
@@ -27,12 +27,12 @@ public class EmployeeManager {
         for(int i = 0; i < employees.size(); i++) {
             if( i > 0 )
                 result += ", ";
-            result += employees.get(i);
+            result += employees.get(i).getName();
         }
         return result;
     }
 
-    public ArrayList<String> getArrayListOfEmployees() {
-        return (ArrayList<String>) employees;
+    public ArrayList<Employee> getArrayListOfEmployees() {
+        return (ArrayList<Employee>) employees;
     }
 }
