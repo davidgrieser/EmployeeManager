@@ -31,4 +31,8 @@ public class EmployeeManager {
         }
         return result;
     }
+
+    public ArrayList<String> getArrayListOfEmployees() {
+        return (ArrayList<String>) employees;
+    }
 }

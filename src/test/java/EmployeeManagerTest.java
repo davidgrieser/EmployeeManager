@@ -41,4 +41,14 @@ public class EmployeeManagerTest {
         EmployeeManager employeeManager = new EmployeeManager(initialEmployees);
         assertEquals("Jimmy, Timmy", employeeManager.getEmployees());
     }
+
+    @Test
+    void getArrayListOfEmployees() {
+        EmployeeManager employeeManager = new EmployeeManager();
+        employeeManager.addEmployee("Jimmy");
+        employeeManager.addEmployee("Timmy");
+        ArrayList<String> actualList = employeeManager.getArrayListOfEmployees();
+        assertEquals("Jimmy", actualList.get(0));
+        assertEquals("Timmy", actualList.get(1));
+    }
 }
