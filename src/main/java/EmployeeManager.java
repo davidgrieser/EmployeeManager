@@ -23,13 +23,13 @@ public class EmployeeManager {
     }
 
     public String getEmployees() {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for(int i = 0; i < employees.size(); i++) {
             if( i > 0 )
-                result += ", ";
-            result += employees.get(i).getName();
+                result.append(", ");
+            result.append(employees.get(i).getName());
         }
-        return result;
+        return result.toString();
     }
 
     public ArrayList<Employee> getArrayListOfEmployees() {
