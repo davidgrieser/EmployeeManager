@@ -17,8 +17,11 @@ public class EmployeeManager {
         this.employees = initialEmployees;
     }
 
-    public void addEmployee(Employee employee) {
+    public void addEmployee(Employee employee) throws MinimumAgeExeception {
         // Add this employee to an ArrayList
+        if(employee.getAge() < 16) {
+            throw new MinimumAgeExeception(16);
+        }
         employees.add(employee);
     }
 
